@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How to create Bird Animation Using HTML and CSS</title>
+        <style>
+            .bird{
+                width: 173px;
+                height: 271px;
+                background-image: url("img/1.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+                animation: fly 1s steps(9) infinite;
+                
+            }
+            
+            @keyframes fly {
+                0%{
+                    background-position: 0px 0px;
+                }
+                100%{
+                    background-position: -1771px 0px;
+                }
+            }
+            .birdcontainer{
+                position: relative;
+                /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+                animation-name: birdcont;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-play-state: running;
+                position: relative;
+            }
+            @keyframes birdcont {
+                from{
+                    left:0%;
+                }
+                to{
+                    left: 100%;
+                }
+            }
+            
+            .bird2{
+                width: 140px;
+                height: 150px;
+                background-image: url("img/2.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation-name: fly2;
+                animation-duration: 0.3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: steps(3);
+                transform: rotateZ(45deg);
+               
+            }
+            @keyframes fly2 {
+                0%{
+                    background-position: 0px 0px;
+                }
+                100%{
+                    background-position: -460px 0px;
+                }
+            }
+        </style>
+    </head>
+    <body> 
+        <div class="birdcontainer">
+            <div class="bird"></div>
+            <div class="bird2"></div>
+        </div> 
+        
+    </body>
+</html>
